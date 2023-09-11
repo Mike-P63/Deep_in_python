@@ -17,17 +17,17 @@
 # print("Finish")
 
 
-# year = int(input('Enter year: '))
-# if year % 4 != 0 or year % 100 == 0 and year % 400 !=0:
-#     print('Usual year')
-# else:
-#     print('VISOKOSNIY')
-
-data = 0
-while data < 100:
-    data +=3
-    if data % 40 == 0:
-        break
+year = int(input('Enter year: '))
+if year % 4 != 0 or year % 100 == 0 and year % 400 !=0:
+    print('Usual year')
 else:
-    data += 5
-print(data)
+    print('VISOKOSNIY')
+
+# data = 0
+# while data < 100:
+#     data +=3
+#     if data % 40 == 0:
+#         break
+# else:
+#     data += 5
+# print(data)
