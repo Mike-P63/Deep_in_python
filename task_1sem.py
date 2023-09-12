@@ -18,8 +18,8 @@ ADDITIONAL_DEVIDER =400
 
 year = int(input('Enter year: '))
 if year%MAIN_DEVIDER != 0 \
-    or year%EXEPTION_DEVIDOR == 0 \
-    and year%ADDITIONAL_DEVIDER !=0:
+or year%EXEPTION_DEVIDOR == 0 \
+and year%ADDITIONAL_DEVIDER !=0:
      print('Usual year')
 else:
      print('VISOKOSNIY')
