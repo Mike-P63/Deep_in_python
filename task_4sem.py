@@ -1,19 +1,9 @@
-# Нарисовать в консоли ёлку спросив у 
-# пользователя количество рядов. 
-# Пример результата:
-# Сколько рядов у ёлки? 5
-#     *
-#    ***
-#   *****
-#  *******
-# *********
+# Выведите в консоль таблицу умножения 
+# от 2х2 до 9х10 как на школьной тетрадке.
 
-rows = int(input('Сколько рядов у ёлки? '))
-STAR = '*'
-SPACE = ' '
-count_spaces = rows - 1
-count_stars = 1
-for row in range(rows):
-    print(SPACE * count_spaces + STAR * count_stars)
-    count_spaces -= 1
-    count_stars += 2
+for i in range(2,10,4):
+    for j in range(2,11):
+        for k in range(i,i+4):
+            print(f'{k:>3} *{j:>3} ={k * j:>3}', end = '\t')
+        print()
+    print()

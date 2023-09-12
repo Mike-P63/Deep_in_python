@@ -1,25 +1,25 @@
-# Напишите программу, которая запрашивает год и проверяет его на високосность. 
-# Распишите все возможные проверки в цепочке elif
+# Пользователь вводит число от 1 до 999. Используя операции с числами 
+# сообщите что введено: цифра, двузначное число или трёхзначное число.
+# Для цифры верните её квадрат, например 5 - 25
+# Для двузначного числа произведение цифр, например 30 - 0
+# Для трёхзначного числа его зеркальное отображение, например 520 - 25
+# Если число не из диапазона, запросите новое число
 # Откажитесь от магических чисел
-# Обязательно учтите год ввода Григорианского календаря
 # В коде должны быть один input и один print
 
 
+number = int(input('Введите число от 1 до 999: '))
 
-# year = int(input('Enter year: '))
-# if year%4 != 0 or year%100 == 0 and year%400 !=0:
-#      print('Usual year')
-# else:
-#      print('VISOKOSNIY')
-
-MAIN_DEVIDER = 4
-EXEPTION_DEVIDOR = 100
-ADDITIONAL_DEVIDER =400
-
-year = int(input('Enter year: '))
-if year%MAIN_DEVIDER != 0 \
-    or year%EXEPTION_DEVIDOR == 0 \
-    and year%ADDITIONAL_DEVIDER !=0:
-     print('Usual year')
+if 0 < number < 10:
+    print(number ** 2)
+elif 10 <= number < 100:
+    number_1 = number % 10
+    number_2 = number // 10
+    print(number_1 * number_2)
+elif 100 <= number < 1000:
+    number_1 = number % 10
+    number_2 = (number // 10) % 10
+    number_3 = number // 100
+    print(number_1 * 100 + number_2 * 10 + number_3)
 else:
-     print('VISOKOSNIY')
+    print('Вы ввели неверное число. Введите число из диапазона 1 - 999')
