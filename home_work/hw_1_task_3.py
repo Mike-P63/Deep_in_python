@@ -10,24 +10,39 @@
 # 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53 ).
 
 
-
 MIN_RANGE = 0
 MAX_RANGE = 100000
 MIN_WHOLE_NUM = 2
+count = 0
 
-number = int(input(f'Введите целое число в диапазоне от {MIN_RANGE} до {MAX_RANGE}: '))
+number = int(input(f'Введите целое число в диапазоне от {MIN_RANGE} до {MAX_RANGE} кроме 0 и 1: '))
 
-if number < 0 or number > 100000:
-    print('Вы ввели недопустимое число')
-elif number == 1 or number == 0:
-    print('Число, которое Вы ввели - не простое и не составное')
+for i in range(MIN_WHOLE_NUM, number // 2 + 1):
+    if number % i == 0:
+        count +=1
+if count == 0:                             # на каждой итерации цикла проверяем, 
+    print(f'Число {number} простое')       # делится ли наше число без остатка на 
+else:                                      # числа из выбранного диапазона цикла. Если да, 
+    print(f'Число {number} составное')     # то count увеличивается на 1. Если число делителей 0 то число простое.
 
-if number >= MIN_WHOLE_NUM:
-    sum = 0
-    for i in range(1, number + 1):
-        if number % i == 0:
-            sum += 1
-    if sum <= 2:
-        print(f'Число {number} простое')
-    else:
-        print(f'Число {number} составное')
+
+#ЕЩЕ ОДИН ВАРИАНТ РЕШЕНИЯ ЗАДАЧИ:
+
+
+MIN_RANGE = 0
+MAX_RANGE = 100000
+MIN_PRIME_NUM = 2
+
+def is_prime(n):
+    if n <= 1:
+        return "Вы ввели некорректное число"
+    if n == MIN_PRIME_NUM:
+        return (f"Число {n}, введенное Вами - простое")
+    for i in range(MIN_PRIME_NUM ,n):
+        if n % i == 0:
+            return (f"Число {n}, введенное Вами - составное")
+        else:
+            return (f"Число {n}, введенное Вами - простое")
+
+n = int(input(f'Введите целое число в диапазоне от {MIN_RANGE} до {MAX_RANGE}: '))
+print(is_prime(n))
