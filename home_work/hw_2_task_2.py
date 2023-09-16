@@ -19,15 +19,15 @@ print(f'Результат вычисления = Ox{hex_decimal_number}')
 # Второй вариант:
 
 
-decimal_number = int(input("Введите положительное десятичное число: "))
-print(f'Функция hex = {hex(decimal_number)}')
+# decimal_number = int(input("Введите положительное десятичное число: "))
+# print(f'Функция hex = {hex(decimal_number)}')
 
-def to_hex (number):
-    hex_dec_rules = "0123456789ABCDEF"
-    hex_decimal_number = " "
-    while number > 0:
-        hex_decimal_number = hex_dec_rules[number % 16] + hex_decimal_number
-        number //= 16
-    return '0x' + hex_decimal_number
+# def to_hex (number):
+#     hex_dec_rules = "0123456789ABCDEF"
+#     hex_decimal_number = " "
+#     while number > 0:
+#         hex_decimal_number = hex_dec_rules[number % 16] + hex_decimal_number
+#         number //= 16
+#     return '0x' + hex_decimal_number
 
-print(f'Собственная функция: {to_hex(decimal_number)}')
+# print(f'Собственная функция: {to_hex(decimal_number)}')
