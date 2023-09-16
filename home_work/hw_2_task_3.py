@@ -19,15 +19,19 @@ b = int(fraction_1[1])
 c = int(fraction_2[0])
 d = int(fraction_2[1])
 
+
 def gcd(x, y):                      # наибольший общий делитель (нод)
     while y != 0:
         (x, y) = (y, x % y)
     return x
+
+
 def summa_fractions(a, b, c, d):
     x = a*d + b*c
     y = b*d
     z = gcd(x, y)
     return (f'{x//z}/{y//z}')
+
 
 def multiply_fractions(a, b, c, d):   # умножаем числители и знаменатели,
     num = a * c                       # вычисляем их нод и делим оба ч и з на нод
@@ -36,6 +40,7 @@ def multiply_fractions(a, b, c, d):   # умножаем числители и �
     num //= common_factor
     den //= common_factor
     return (num, den)
+
 
 product_num, product_den = multiply_fractions(a, b, c, d)
 
