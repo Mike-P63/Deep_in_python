@@ -36,6 +36,7 @@ def multiply_fractions(a, b, c, d):   # умножаем числители и �
     num //= common_factor
     den //= common_factor
     return (num, den)
+
 product_num, product_den = multiply_fractions(a, b, c, d)
 
 print(f'Собственная функция Сложение: {summa_fractions(a,b,c,d)}')
