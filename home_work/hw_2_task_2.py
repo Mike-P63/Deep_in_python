@@ -5,12 +5,12 @@
 
 decimal_number = int(input("Введите положительное десятичное число: "))
 print(f'Функция hex = {hex(decimal_number)}')
-hex_dec_rules = "0123456789ABCDEF"
+HEC_DEC_RULES = "0123456789ABCDEF"
 hex_decimal_number = " "
 
 while decimal_number > 0:
     n = decimal_number % 16
-    hex_dec_rule = hex_dec_rules[n]
+    hex_dec_rule = HEC_DEC_RULES[n]
     hex_decimal_number = hex_dec_rule + hex_decimal_number
     decimal_number //= 16
 print(f'Результат вычисления = Ox{hex_decimal_number}')
