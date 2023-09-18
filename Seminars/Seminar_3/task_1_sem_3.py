@@ -6,25 +6,25 @@
 # print(list(filter(lambda x: lst.count(x) == 1, lst)))
 
 
-numbers = [1, 2, 2, 3, 3, 4, 5]
-unique_numbers = list(set(numbers))
-print(unique_numbers)
+# numbers = [1, 2, 2, 3, 3, 4, 5]
+# unique_numbers = list(set(numbers))
+# print(unique_numbers)
 
 
 
-numbers = [23, 23, 38, 38, 66, 66, 90]
+# numbers = [23, 23, 38, 38, 66, 66, 90]
 
-def get_unique_numbers(numbers):
-    unique = []
-    for number in numbers:
-        if number in unique:
-            continue
-        else:
-            unique.append(number)
-    return unique
-print(get_unique_numbers(numbers))
+# def get_unique_numbers(numbers):
+#     unique = []
+#     for number in numbers:
+#         if number in unique:
+#             continue
+#         else:
+#             unique.append(number)
+#     return unique
+# print(get_unique_numbers(numbers))
 
-print()
+# print()
 
 a = [2,2,3,3,4,4,99]
 res = []
