@@ -5,7 +5,7 @@
 
 my_list = (2,2,3,3,4,5,6,6,7,7,8,9)
 
-def only_double(my_list: list) -> list:
+def only_double(my_list):
     return list(set(filter(lambda x: my_list.count(x) > 1, my_list)))
 
 print(f'Дублирующиеся элементы в списке: {only_double(my_list)}')
