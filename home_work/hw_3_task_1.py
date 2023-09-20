@@ -3,13 +3,13 @@
 # не должно быть дубликатов.
 
 my_list = [1, 2, 3, 2, 1, 4, 7, 5, 6, 7, 10, 12]
-my_list_filter = []
+my_list_dubble = []
 
 for el in my_list:
-    if my_list.count(el) > 1 and el not in my_list_filter:
-        my_list_filter.append(el)
+    if my_list.count(el) > 1 and el not in my_list_dubble:
+        my_list_dubble.append(el)
 
-print("Дублирующиеся элементы в списке: ", my_list_filter)
+print("Дублирующиеся элементы в списке: ", my_list_dubble)
 
 # Второй вариант решения:
 
