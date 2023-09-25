@@ -20,23 +20,23 @@
 # z = next(iter(y))
 # print(z)
 
-data = [2, 5, 1, 42, 65, 76, 24, 77]
-res = []
-for item in data:
-    if item % 2 == 0:
-        res.append(item)
-print(f'{res = }')
+# data = [2, 5, 1, 42, 65, 76, 24, 77]
+# res = []
+# for item in data:
+#     if item % 2 == 0:
+#         res.append(item)
+# print(f'{res = }')
 
-data = [2, 5, 1, 42, 65, 76, 24, 77]
-res = [item for item in data if item % 2 == 0]
-print(f'{res = }')
+# data = [2, 5, 1, 42, 65, 76, 24, 77]
+# res = [item for item in data if item % 2 == 0]
+# print(f'{res = }')
 
-x = [1, 1, 2, 3, 5, 8, 13]
-y = [1, 2, 6, 24, 120, 720]
-print(f'{len(x)=}\t{len(y)=}')
-res = [i + j for i in x if i % 2 != 0 for j in y if j != 1]
-print(f'{len(res)=}\n{res}')
-print()
+# x = [1, 1, 2, 3, 5, 8, 13]
+# y = [1, 2, 6, 24, 120, 720]
+# print(f'{len(x)=}\t{len(y)=}')
+# res = [i + j for i in x if i % 2 != 0 for j in y if j != 1]
+# print(f'{len(res)=}\n{res}')
+# print()
 # x = [1, 1, 2, 3, 5, 8, 13]
 # y = [1, 2, 6, 24, 120, 720]
 # print(f'{len(x)=}\t{len(y)=}')
@@ -44,12 +44,12 @@ print()
 # for item in mult:
 #     print(f'{item = }')
 
-x = [1, 1, 2, 3, 5, 8, 13]
-y = [1, 2, 6, 24, 120, 720]
-print(f'{len(x)=}\t{len(y)=}')
-res = {i + j for i in x if i % 2 != 0 for j in y if j != 1}
-print(f'{len(res)=}\n{res}')
-print()
+# x = [1, 1, 2, 3, 5, 8, 13]
+# y = [1, 2, 6, 24, 120, 720]
+# print(f'{len(x)=}\t{len(y)=}')
+# res = {i + j for i in x if i % 2 != 0 for j in y if j != 1}
+# print(f'{len(res)=}\n{res}')
+# print()
 
 my_dictcomp = {i: chr(i) for i in range(97, 123)}
 print(my_dictcomp) # {97: 'a', 98: 'b', 99: 'c',... }
@@ -76,22 +76,25 @@ print()
 # for i, num in enumerate(factorial(10), start=1):
 #     print(f'{i}! = {num}')
 
-def factorial(n):
-    number = 1
-    for i in range(1, n + 1):
-        number *= i
-        yield number
+# def factorial(n):
+#     number = 1
+#     for i in range(1, n + 1):
+#         number *= i
+#         yield number
 
-for i, num in enumerate(factorial(10), start=1):
-    print(f'{i}! = {num}')
+# for i, num in enumerate(factorial(10), start=1):
+#     print(f'{i}! = {num}')
 
-print()
+# print()
 
-def gen(a: int, b: int) -> str:
-    if a > b:
-        a, b = b, a
-    for i in range(a, b + 1):
-        yield str(i)
+# def gen(a: int, b: int) -> str:
+#     if a > b:
+#         a, b = b, a
+#     for i in range(a, b + 1):
+#         yield str(i)
     
-for item in gen(10, 1):
-    print(f'{item = }')
+# for item in gen(10, 1):
+#     print(f'{item = }')
+
+
+
