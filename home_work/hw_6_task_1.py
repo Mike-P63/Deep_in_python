@@ -1,8 +1,10 @@
 
 
 
-def date_to_prove(date: str):
-    day, month, year = map(int, date.split('.'))
+def date_to_prove(date):
+    string_num = str(date)
+    print(string_num)
+    day, month, year = map(int, string_num.split('.'))
     if 1 <= year <= 9999:
         if month in [1, 3, 5, 7, 8, 10, 12] and 1 <= day <= 31:
             return True
@@ -17,15 +19,17 @@ def date_to_prove(date: str):
 def is_leap_year(year):
     return year % 4 == 0 and year % 100 != 0 or year % 400 == 0
 
-print(date_to_prove("29.2.2024"))
+print(date_to_prove ("29.2.2024"))
+
+
 
 
 
 
 # gjcktlytt
 
-import os
-import pathlib
+# import os
+# import pathlib
 
 
 # def sort_files(path):
@@ -45,16 +49,18 @@ import pathlib
 
 # sort_files(pathlib.Path(r"D:\обучение\python\python part 2\sem7\testt"))
 
-def sort_files(path):
-    os.chdir(path)
-    files = os.listdir()
-    ext = {}
-    for i in files:
-        *_, extention = i.split(".")
-        ext[extention] = ext.get(extention, []) + [i]
-    for key, value in ext.items():
-        os.mkdir(key)
-        for i in value:
-            os.replace(i, f"{key}\\{i}")
+# def sort_files(path):
+#     os.chdir(path)
+#     files = os.listdir()
+#     ext = {}
+#     for i in files:
+#         *_, extention = i.split(".")
+#         ext[extention] = ext.get(extention, []) + [i]
+#     for key, value in ext.items():
+#         os.mkdir(key)
+#         for i in value:
+#             os.replace(i, f"{key}\\{i}")
 
-sort_files(r"python part 2\sem7\testt")
+# sort_files(r"python part 2\sem7\testt")
+
+
