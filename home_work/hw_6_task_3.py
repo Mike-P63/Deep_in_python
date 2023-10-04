@@ -5,37 +5,38 @@
 # размещены таким образом, что они не находятся на одной вертикали, горизонтали или диагонали.
 # Список из 4х комбинаций координат сохраните в board_list. Дополнительно печатать его не надо.
 
+
+
 import random
+from itertools import combinations
 
-# def random_queens_placement():
-#     board = [[0] * 8 for _ in range(8)]
-#     for row in range(8):
-#         col = random.randint(0, 7)
-#         board[row][col] = 1
-#     return board
+def generate_board():
+    # Генерируем случайную доску
+    board = []
 
-# for _ in range(4):
-#     board = random_queens_placement()
-#     for row in board:
-#         print(row)
+    for i in range(1, 8+1):
+        queen = (i, random.randint(1, 8))
+        board.append(queen)
+    return board
 
+def is_attacking(q1, q2):
+    # Проверяем, бьют ли ферзи друг друга
+    return q1[0] == q2[0] or q1[1] == q2[1] or abs(q1[0] - q2[0]) == abs(q1[1] - q2[1])
 
-def random_queens_placement(positions):
-    for i in range(8):
-        for j in range(i+1, 8):
-            if positions[i] == positions[j] or \
-                positions[i] - i == positions[j] - j or \
-                positions[i] + i == positions[j] + j:
-                return False
+def check_queens(queens):
+    # Проверяем все возможные пары ферзей
+    for q1, q2 in combinations(queens, 2):
+        if is_attacking(q1, q2):
+            return False
     return True
 
-def generate_positions():
-    positions = list(range(1, 9))
-    for i in range(4):
-        random.shuffle(positions)
-        while not random_queens_placement(positions):
-            random.shuffle(positions)
-        print(positions)
-
-
-print(generate_positions())
+def generate_boards():
+    # Генерируем доски, пока не получим 4 успешные расстановки
+    count = 0
+    board_list = []
+    while count < 4:
+        board = generate_board()
+        if check_queens(board):
+            count += 1
+            board_list.append(board)
+    return board_list
