@@ -1,0 +1,32 @@
+{
+    "F:\\Deep_in_python": {
+        "unit_type": "Directory",
+        "unit_name": "Home_Work",
+        "unit_size": 100939,
+        "parent_dir": "Deep_in_python"
+    },
+    "F:\\Deep_in_python\\Home_Work": {
+        "unit_type": "File",
+        "unit_name": "hw_9_task_1.py",
+        "unit_size": 2901,
+        "parent_dir": "Home_Work"
+    },
+    "F:\\Deep_in_python\\Home_Work\\HW_7_PACK": {
+        "unit_type": "Directory",
+        "unit_name": "tasks_sem_and_hw",
+        "unit_size": 13134,
+        "parent_dir": "HW_7_PACK"
+    },
+    "F:\\Deep_in_python\\Home_Work\\HW_7_PACK\\tasks_sem_and_hw": {
+        "unit_type": "Directory",
+        "unit_name": "__pycache__",
+        "unit_size": 2116,
+        "parent_dir": "tasks_sem_and_hw"
+    },
+    "F:\\Deep_in_python\\Home_Work\\HW_7_PACK\\tasks_sem_and_hw\\__pycache__": {
+        "unit_type": "File",
+        "unit_name": "__init__.cpython-311.pyc",
+        "unit_size": 175,
+        "parent_dir": "__pycache__"
+    }
+}
