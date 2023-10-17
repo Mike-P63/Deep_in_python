@@ -31,7 +31,7 @@ class Archive:
     #     return f'now {self.text}, now {self.number}, Arhiv_text {self.text_history},Arhiv_num {self.number_history}'
 
     def __repr__(self):
-        return f"Archive ({self.text}, {self.number})"
+        return f"Archive" ({self.text}, {self.number})"
 
 a = Archive('yhhjjjkklll', 5)
 print(a.text_history, a.number_history)
