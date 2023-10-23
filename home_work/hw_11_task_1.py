@@ -1,34 +1,125 @@
+# Разработайте программное обеспечение для ведения журнала событий. Вам необходимо создать класс, который будет представлять строки журнала и включать в себя информацию об авторе и времени создания каждой записи.
+# Условие задачи:
+# Создайте класс MyStr, который наследуется от встроенного класса str и добавлять дополнительную информацию о создателе строки и времени ее создания. Этот класс будет представлять строки с информацией о событиях.
+# Класс MyStr должен иметь следующие атрибуты и методы:
+# value (str): Строковое значение с описанием события.
+# author (str): Имя автора, создавшего запись.
+# time: Время создания записи в формате '%Y-%m-%d %H:%M'.
+# Магические методы (Dunder-методы):
+# Реализуйте метод __new__(cls, value, author), который создает новый объект класса MyStr с заданным value и author. Метод также автоматически фиксирует время создания записи. В этом методе создается новый объект MyStr с указанными атрибутами и текущим временем в атрибуте time.
+# Реализуйте метод __str__(self), который возвращает строковое представление объекта класса MyStr с информацией о событии, авторе и времени создания.
+# Реализуйте метод __repr__(self), который возвращает строковое представление объекта класса MyStr.  
+# Метод __repr__ возвращает строку, которая может быть использована для создания точно такого же объектаMyStrс теми же значениямиvalueиauthor`.
 
-import datetime
+# Пример использования.
+
+# На входе:
+# event = MyStr("Завершилось тестирование", "John")
+# print(event)
+# На выходе:
+# Завершилось тестирование (Автор: John, Время создания: [ в формате '%Y-%m-%d %H:%M'])
+
+# На входе:
+# my_string = MyStr("Пример текста", "Иван")
+# print(my_string)
+# На выходе:
+# Пример текста (Автор: Иван, Время создания: 2023-10-10 15:56)
+
+# На входе:
+# my_string = MyStr("Мама мыла раму", "Маршак")
+# print(repr(my_string))
+# На выходе:
+# MyStr('Мама мыла раму', 'Маршак')
+
+
+
+
+
+import time
+from datetime import datetime
 
 
 class MyStr(str):
+    """
+    Класс для создания строки с информацией об авторе и времени создания.
+
+    Атрибуты:
+    value (str): строковое значение.
+    author (str): имя автора.
+
+    Dunder методы:
+    __new__(cls, value, author): создает новый объект класса.
+    __str__(): возвращает строковое представление объекта класса.
+    __repr__(): возвращает строковое представление объекта класса для отладки.
+
+    """
+class MyStr(str):
+
     def __new__(cls, value, author):
         instance = super().__new__(cls, value)
         instance.author = author
-        instance.time = datetime.datetime.today()
-        date = datetime.datetime.today()
-        a = date.strftime('%Y-%m-%d %H:%M')
+        instance.time = time.time()
         return instance
-     
-    def __init__(self, value, author):
-        self.value = value
-        self.author = author
-        date = datetime.datetime.today()
-        a = date.strftime('%Y-%m-%d %H:%M')
 
     def __str__(self):
-        date = datetime.datetime.today()
-        a = date.strftime('%Y-%m-%d %H:%M')
-        return f' {self.value} (Автор:  {self.author}, Время создания: {a})'
+        formatted_time = datetime.fromtimestamp(self.time).strftime('%Y-%m-%d %H:%M')
+        return f"{super().__str__()} (Автор: {self.author}, Время создания: {formatted_time})"
 
     def __repr__(self):
-        date = datetime.datetime.today()
-        a = date.strftime('%Y-%m-%d %H:%M')
-        return f"MyStr({self.value}, {self.author})"
+        return f"MyStr('{super().__str__()}', '{self.author}')"
 
 event = MyStr('Завершилось тестирование', 'John')
 print(event)
+
+# my_string = MyStr("Пример текста", "Иван")
+# print(my_string)
+
+# my_string = MyStr("Мама мыла раму", "Маршак")
+# print(repr(my_string))
+
+
+
+
+
+
+
+
+
+#  мое неправильное решение
+
+
+
+
+# import datetime
+
+
+# class MyStr(str):
+#     def __new__(cls, value, author):
+#         instance = super().__new__(cls, value)
+#         instance.author = author
+#         instance.time = datetime.datetime.today()
+#         date = datetime.datetime.today()
+#         a = date.strftime('%Y-%m-%d %H:%M')
+#         return instance
+     
+#     def __init__(self, value, author):
+#         self.value = value
+#         self.author = author
+#         date = datetime.datetime.today()
+#         a = date.strftime('%Y-%m-%d %H:%M')
+
+#     def __str__(self):
+#         date = datetime.datetime.today()
+#         a = date.strftime('%Y-%m-%d %H:%M')
+#         return f' {self.value} (Автор:  {self.author}, Время создания: {a})'
+
+#     def __repr__(self):
+#         date = datetime.datetime.today()
+#         a = date.strftime('%Y-%m-%d %H:%M')
+#         return f"MyStr({self.value}, {self.author})"
+
+# event = MyStr('Завершилось тестирование', 'John')
+# print(event)
 
 # my_string = MyStr("Пример текста", "Иван")
 # print(my_string)
