@@ -53,7 +53,7 @@ class MyStr(str):
     __repr__(): возвращает строковое представление объекта класса для отладки.
 
     """
-class MyStr(str):
+# class MyStr(str):
 
     def __new__(cls, value, author):
         instance = super().__new__(cls, value)
