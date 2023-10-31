@@ -1,0 +1,1 @@
+ERROR, 2023-10-31 19:09:12,658, Ошибка Matrix.__init__() missing 2 required positional arguments: 'rows' and 'cols' в функции Matrix при аргументах (), {}

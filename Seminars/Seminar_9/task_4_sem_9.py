@@ -16,7 +16,7 @@ def func_count(count):
 
 @func_count(10)
 def sum_func(a,b,*args,**kwargs):
-    return a+b
+    return a/b
 
 
 
