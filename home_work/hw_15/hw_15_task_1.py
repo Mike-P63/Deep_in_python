@@ -1,3 +1,5 @@
+#  Работаю с логгированием:
+
 import argparse
 import logging
 
@@ -33,3 +35,5 @@ MAX_WHEITH = 0,5
 print(f'В рюкзак поместятся вещи: {rucksack_max_wheith(ITEMS, MAX_WHEITH)}')
 
 
+#  В файле myfunc_2.log : 
+# ERROR, 2023-10-31 21:22:17,385, Ошибка '<=' not supported between instances of 'int' and 'tuple' в функции rucksack_max_wheith при аргументах ({'Топор': 1, 'Вода': 3, 'Консервы': 6, 'Одежда': 4, 'Палатка': 2, 'Котелок': 5}, (0, 5)), {}

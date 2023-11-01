@@ -67,6 +67,8 @@ def print_date(str_day):
             count += 1
             if count == num:
                 return temp_date
+            
+
     raise ValueError
 
 
@@ -81,3 +83,6 @@ def par():
     return print_date(f'{args.number}-ый {args.weekday} {args.month}')
 
 print(par())
+
+
+# Seminars/Seminar_15/task_5.py -n 1 -w воскресенье -m октября

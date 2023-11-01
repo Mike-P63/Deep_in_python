@@ -1,3 +1,4 @@
+# Работаю с логгированием:
 
 import logging
 import time
@@ -54,3 +55,9 @@ print(my_string)
 
 # my_string = MyStr("Мама мыла раму", "Маршак")
 # print(repr(my_string))
+
+
+# В файле myfunc_3.log :
+
+# ERROR, 2023-10-31 19:09:37,827, Ошибка MyStr.__new__() missing 2 required positional arguments: 'value' and 'author' в функции MyStr при аргументах (), {}
+# ERROR, 2023-10-31 19:09:37,828, Ошибка MyStr.__new__() missing 2 required positional arguments: 'value' and 'author' в функции MyStr при аргументах (), {}

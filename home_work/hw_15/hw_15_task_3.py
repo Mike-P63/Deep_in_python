@@ -1,3 +1,6 @@
+# Работаю с логгированием и парсером без создания функции для него
+
+import argparse
 import logging
 
 FORMAT = '{levelname}, {asctime}, {msg}'
@@ -64,10 +67,24 @@ class Matrix:
 matrix1 = Matrix()  # намеренно не передаем аргументы в функцию
 matrix1.data = [[1, 2, 3], [4, 5, 6]]
 
-matrix2 = Matrix(2, 3)
+matrix2 = Matrix(2,3)
 matrix2.data = [[7, 8, 9], [10, 11, 12]]
+
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument('param', metavar='rows cols', type=int, nargs=2, help='enter param separated by a space')
+    args = parser.parse_args()
+    print(Matrix(*args.param))
+
 
 # Выводим матрицы
 print(matrix1)
 
 print(matrix2)
+
+# Ввод в командной строке: python Home_Work/hw_15/hw_15_task_3.py 2 3
+
+# В файле myfunc_4.log:
+# ERROR, 2023-11-01 14:29:27,295, Ошибка Matrix.__init__() missing 2 required positional arguments: 'rows' and 'cols' в функции Matrix при аргументах (), {}

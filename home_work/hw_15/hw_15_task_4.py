@@ -1,3 +1,5 @@
+# Работаю с логгированием и вводом в командную строку используя функцию parser_func
+
 import argparse
 import logging
 
@@ -28,6 +30,7 @@ def get_number(number: int, mod: int = 10) -> str:
     logger.info(f'{number}, {mod} = {result}')
     return result
 
+#  работа через функцию:
 
 def parser_func():
     parser = argparse.ArgumentParser(description='Получаем аргументы из строки')
@@ -45,4 +48,8 @@ parser_func()
 #     print(get_number(1234123, -2))
     
 
-# Ввод в командной строке: python Home_Work/hw_15/hw_15_task_4.py --number 1234123 --mod -2 (ERROR - 2023-10-31 22:20:45,288 - Система исчисления 0 не существует)
+# Ввод в командной строке: python Home_Work/hw_15/hw_15_task_4.py --number 1234123 --mod -2
+
+
+# В файле myfunc_5.log:
+# ERROR - 2023-11-01 14:32:09,213 - Система исчисления -2 не существует
